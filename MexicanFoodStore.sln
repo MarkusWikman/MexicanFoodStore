@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanFoodStore.Data", "MexicanFoodStore.Data\MexicanFoodStore.Data.csproj", "{568C391C-01BD-410D-9E56-F86DB747615A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanFoodStore.Data.Shared", "MexicanFoodStore.Data.Shared\MexicanFoodStore.Data.Shared.csproj", "{F894CEAE-3064-4F83-A691-30D88927F359}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{568C391C-01BD-410D-9E56-F86DB747615A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{568C391C-01BD-410D-9E56-F86DB747615A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{568C391C-01BD-410D-9E56-F86DB747615A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F894CEAE-3064-4F83-A691-30D88927F359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F894CEAE-3064-4F83-A691-30D88927F359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F894CEAE-3064-4F83-A691-30D88927F359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F894CEAE-3064-4F83-A691-30D88927F359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
