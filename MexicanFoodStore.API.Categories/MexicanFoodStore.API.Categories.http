@@ -1,0 +1,6 @@
+@MexicanFoodStore.API.Categories_HostAddress = http://localhost:5248
+
+GET {{MexicanFoodStore.API.Categories_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

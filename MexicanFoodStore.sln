@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanFoodStore.Data", "MexicanFoodStore.Data\MexicanFoodStore.Data.csproj", "{568C391C-01BD-410D-9E56-F86DB747615A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MexicanFoodStore.Data", "MexicanFoodStore.Data\MexicanFoodStore.Data.csproj", "{568C391C-01BD-410D-9E56-F86DB747615A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanFoodStore.Data.Shared", "MexicanFoodStore.Data.Shared\MexicanFoodStore.Data.Shared.csproj", "{F894CEAE-3064-4F83-A691-30D88927F359}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MexicanFoodStore.Data.Shared", "MexicanFoodStore.Data.Shared\MexicanFoodStore.Data.Shared.csproj", "{F894CEAE-3064-4F83-A691-30D88927F359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanFoodStore.API.Categories", "MexicanFoodStore.API.Categories\MexicanFoodStore.API.Categories.csproj", "{0EFC5432-4AF2-4A83-92EF-5BD999C04603}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F894CEAE-3064-4F83-A691-30D88927F359}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F894CEAE-3064-4F83-A691-30D88927F359}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F894CEAE-3064-4F83-A691-30D88927F359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EFC5432-4AF2-4A83-92EF-5BD999C04603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EFC5432-4AF2-4A83-92EF-5BD999C04603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EFC5432-4AF2-4A83-92EF-5BD999C04603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EFC5432-4AF2-4A83-92EF-5BD999C04603}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
