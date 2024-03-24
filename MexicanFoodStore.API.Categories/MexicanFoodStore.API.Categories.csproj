@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MexicanFoodStore.API.DTO\MexicanFoodStore.API.DTO.csproj" />
+    <ProjectReference Include="..\MexicanFoodStore.API.Extensions\MexicanFoodStore.API.Extensions.csproj" />
     <ProjectReference Include="..\MexicanFoodStore.Data.Shared\MexicanFoodStore.Data.Shared.csproj" />
     <ProjectReference Include="..\MexicanFoodStore.Data\MexicanFoodStore.Data.csproj" />
   </ItemGroup>
