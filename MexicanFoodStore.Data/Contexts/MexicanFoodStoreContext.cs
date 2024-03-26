@@ -1,10 +1,9 @@
-﻿
-using MexicanFoodStore.Data.Entities;
+﻿using MexicanFoodStore.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace MexicanFoodStore.Data.Contexts
 {
-    public class MexicanFoodStoreContext(DbContextOptions<MexicanFoodStoreContext> builder) : DbContext(builder)
+    public class MexicanFoodStoreContext(DbContextOptions<MexicanFoodStoreContext> options) : DbContext(options)
     {
         public DbSet<Category> Categories => Set<Category>();
         public DbSet<Product> Products => Set<Product>();
