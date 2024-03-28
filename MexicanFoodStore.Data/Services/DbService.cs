@@ -2,6 +2,7 @@
 using AutoMapper;
 using MexicanFoodStore.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace MexicanFoodStore.Data.Services;
 
@@ -14,6 +15,7 @@ public class DbService : IDbService
         _db = db;
         _mapper = mapper;
     }
+
     public virtual async Task<List<TDto>> GetAsync<TEntity, TDto>()
         where TEntity : class
         where TDto : class
@@ -21,6 +23,12 @@ public class DbService : IDbService
         //IncludeNavigationsFor<TEntity>();
         var entities = await _db.Set<TEntity>().ToListAsync();
         return _mapper.Map<List<TDto>>(entities);
+    }
+    public IQueryable<TEntity> GetAsync<TEntity>(
+    Expression<Func<TEntity, bool>> expression)
+    where TEntity : class
+    {
+        return _db.Set<TEntity>().Where(expression);
     }
     public async Task<TEntity> AddAsync<TEntity, TDto>(TDto dto) where TEntity : class where TDto : class
     {
