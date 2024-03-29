@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MexicanFoodStore.API.DTO", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MexicanFoodStore.API.Extensions", "MexicanFoodStore.API.Extensions\MexicanFoodStore.API.Extensions.csproj", "{37DC67BA-F2D7-4C30-97F1-DB09D88A2656}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanFoodStore.API.Products", "MexicanFoodStore.API.Products\MexicanFoodStore.API.Products.csproj", "{D79B0FBB-FB71-4108-9C6E-020925CFE8C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MexicanFoodStore.API.Products", "MexicanFoodStore.API.Products\MexicanFoodStore.API.Products.csproj", "{D79B0FBB-FB71-4108-9C6E-020925CFE8C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanFoodStore.UI", "MexicanFoodStore.UI\MexicanFoodStore.UI.csproj", "{532B8B9D-2DF3-42F4-BF88-E2C990BDDFD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D79B0FBB-FB71-4108-9C6E-020925CFE8C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D79B0FBB-FB71-4108-9C6E-020925CFE8C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D79B0FBB-FB71-4108-9C6E-020925CFE8C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{532B8B9D-2DF3-42F4-BF88-E2C990BDDFD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{532B8B9D-2DF3-42F4-BF88-E2C990BDDFD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{532B8B9D-2DF3-42F4-BF88-E2C990BDDFD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{532B8B9D-2DF3-42F4-BF88-E2C990BDDFD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
