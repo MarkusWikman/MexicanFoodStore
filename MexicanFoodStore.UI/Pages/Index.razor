@@ -1,0 +1,14 @@
+﻿@page "/"
+@inject UIService Service
+
+
+<h3>Index</h3>
+<ul>
+@foreach(var c in Service!.Products)
+{
+    <li>@c.Name</li>
+}
+</ul>
+@code {
+}
+
