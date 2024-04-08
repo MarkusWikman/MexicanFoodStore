@@ -7,12 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.2" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MexicanFoodStore.API.DTO\MexicanFoodStore.API.DTO.csproj" />
+    <ProjectReference Include="..\MexicanFoodStore.UI.Http\MexicanFoodStore.UI.Http.csproj" />
+    <ProjectReference Include="..\MexicanFoodStore.UI.Models\MexicanFoodStore.UI.Models.csproj" />
+    <ProjectReference Include="..\MexicanFoodStore.UI.Storage\MexicanFoodStore.UI.Storage.csproj" />
   </ItemGroup>
 
 </Project>
