@@ -17,7 +17,7 @@ namespace MexicanFoodStore.API.DTO.DTOs
     public class CategoryGetDTO : CategoryPutDTO
     {
         //public List<FilterGetDTO>? Filters { get; set; }
-
+        public List<ProductGetDTO>? Products { get; set; }
     }
 
     public class CategorySmallGetDTO : CategoryPutDTO

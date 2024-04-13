@@ -2,23 +2,16 @@
 @inject UIService service
 
 <h3>Index</h3>
-<CascadingValue Value="Service" Name="Service">
-    @if(Service is not null)
-    {
+@if (service is not null)
+{
     var nr = 1;
-    foreach(var c in Service.Categories)
-        {
-            <p>@nr</p>
-            nr++;
-        }
-    }
-    else
+    foreach (var c in service.Categories)
     {
-        <p>I cant find it</p>
+        <p>@nr</p>
+        nr++;
     }
-</CascadingValue>
-@code {
-    [CascadingParameter] public UIService? Service { get; set; }
-
-
+}
+else
+{
+    <p>I can't find it</p>
 }
