@@ -1,15 +1,24 @@
 ﻿@page "/"
-@inject UIService Service
-
+@inject UIService service
 
 <h3>Index</h3>
-<ul>
-@foreach(var c in Service!.Products)
-{
-    // This never shows up
-    <li>@c.Name</li>
-}
-</ul>
+<CascadingValue Value="Service" Name="Service">
+    @if(Service is not null)
+    {
+    var nr = 1;
+    foreach(var c in Service.Categories)
+        {
+            <p>@nr</p>
+            nr++;
+        }
+    }
+    else
+    {
+        <p>I cant find it</p>
+    }
+</CascadingValue>
 @code {
-}
+    [CascadingParameter] public UIService? Service { get; set; }
 
+
+}

@@ -8,7 +8,7 @@ namespace MexicanFoodStore.UI.Services
     public class UIService(CategoryHttpClient categoryHttp,
     ProductHttpClient productHttp, IMapper mapper, IStorageService storage)
     {
-        List<CategoryGetDTO> Categories { get; set; } = [];
+        public List<CategoryGetDTO> Categories { get; set; } = [];
         public List<ProductGetDTO> Products { get; private set; } = [];
         public List<ProductGetDTO> CartItems { get; private set; } = [];
         public List<LinkGroup> CaregoryLinkGroups { get; private set; } =
@@ -39,24 +39,24 @@ namespace MexicanFoodStore.UI.Services
 
         public async Task GetProductsAsync() =>
             Products = await productHttp.GetProductsAsync(CurrentCategoryId);
-        public async Task<List<T>> ReadStorage<T>(string key) /*where T : class*/
-        {
-            if (string.IsNullOrEmpty(key) || storage is not null) return [];
-            return await storage.GetAsync<List<T>>(key);
-        }
-        public async Task<T> ReadSingleStorage<T>(string key) /*where T : class*/
-        {
-            return await storage.GetAsync<T>(key);
-        }
-        public async Task SaveToStorage<T>(string key, T value) /*where T : class*/
-        {
-            if (string.IsNullOrEmpty(key) || storage is not null) return;
-            await storage.SetAsync<T>(key, value);
-        }
-        public async Task RemoveFromStorage(string key) /*where T : class*/
-        {
-            if (string.IsNullOrEmpty(key) || storage is not null) return;
-            await storage.RemoveAsync(key);
-        }
+        //public async Task<List<T>> ReadStorage<T>(string key) /*where T : class*/
+        //{
+        //    if (string.IsNullOrEmpty(key) || storage is not null) return [];
+        //    return await storage.GetAsync<List<T>>(key);
+        //}
+        //public async Task<T> ReadSingleStorage<T>(string key) /*where T : class*/
+        //{
+        //    return await storage.GetAsync<T>(key);
+        //}
+        //public async Task SaveToStorage<T>(string key, T value) /*where T : class*/
+        //{
+        //    if (string.IsNullOrEmpty(key) || storage is not null) return;
+        //    await storage.SetAsync<T>(key, value);
+        //}
+        //public async Task RemoveFromStorage(string key) /*where T : class*/
+        //{
+        //    if (string.IsNullOrEmpty(key) || storage is not null) return;
+        //    await storage.RemoveAsync(key);
+        //}
     }
 }
