@@ -10,22 +10,24 @@
 @code {
     [CascadingParameter(Name = "Service")] public UIService? Service { get; set; }
     [Parameter] public EventCallback OnChange { get; set; }
-    void OnAsideCallBack(int id)
+    
+    async void OnAsideCallBack(int id)
     {
-        if (OnChange.HasDelegate)
-        {     
-            OnChange.InvokeAsync();
+        if (OnChange.HasDelegate && Service is not null)
+        {
+            await Service.OnCategoryLinkClick(id);
+            await OnChange.InvokeAsync();
         }
     }
 
-    // protected override async Task OnInitializedAsync()
-    // {
-    //     if (Service is not null)
-    //     {
-    //         await Service.GetLinkGroup();
-    //         await OnChange.InvokeAsync();
-    //     }
-    // }
+    protected override async Task OnInitializedAsync()
+    {
+        if (Service is not null)
+        {
+            await Service.GetLinkGroup();
+            await OnChange.InvokeAsync();
+        }
+    }
     // List<LinkGroup> CategoryLinkGroups { get; set; } = new()
     // {
     //     new LinkGroup()

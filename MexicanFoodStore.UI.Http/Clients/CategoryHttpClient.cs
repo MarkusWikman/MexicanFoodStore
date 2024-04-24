@@ -10,7 +10,7 @@ namespace MexicanFoodStore.UI.Http.Clients
     public class CategoryHttpClient
     {
         private readonly HttpClient _httpClient;
-        string _baseAddress = "https://localhost:5000/api/";
+        string _baseAddress = "https://localhost:5005/api/";
 
         public CategoryHttpClient(HttpClient httpClient)
         {
