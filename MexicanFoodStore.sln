@@ -17,11 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MexicanFoodStore.API.Produc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MexicanFoodStore.UI", "MexicanFoodStore.UI\MexicanFoodStore.UI.csproj", "{532B8B9D-2DF3-42F4-BF88-E2C990BDDFD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanFoodStore.UI.Models", "MexicanFoodStore.UI.Models\MexicanFoodStore.UI.Models.csproj", "{D890EEC5-72DF-4AD8-A3FC-0965D244BA82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MexicanFoodStore.UI.Models", "MexicanFoodStore.UI.Models\MexicanFoodStore.UI.Models.csproj", "{D890EEC5-72DF-4AD8-A3FC-0965D244BA82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanFoodStore.UI.Http", "MexicanFoodStore.UI.Http\MexicanFoodStore.UI.Http.csproj", "{6FCE36B3-A1DE-4C97-897D-504A007A3779}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MexicanFoodStore.UI.Http", "MexicanFoodStore.UI.Http\MexicanFoodStore.UI.Http.csproj", "{6FCE36B3-A1DE-4C97-897D-504A007A3779}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanFoodStore.UI.Storage", "MexicanFoodStore.UI.Storage\MexicanFoodStore.UI.Storage.csproj", "{3692FCD9-E2FF-4454-9B9C-F4EBD0E389BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MexicanFoodStore.UI.Storage", "MexicanFoodStore.UI.Storage\MexicanFoodStore.UI.Storage.csproj", "{3692FCD9-E2FF-4454-9B9C-F4EBD0E389BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanFoodStore.API.Product", "MexicanFoodStore.API.Product\MexicanFoodStore.API.Product.csproj", "{51CF08A3-DC1B-453F-8DCE-2EBF0EB4B80C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{3692FCD9-E2FF-4454-9B9C-F4EBD0E389BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3692FCD9-E2FF-4454-9B9C-F4EBD0E389BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3692FCD9-E2FF-4454-9B9C-F4EBD0E389BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51CF08A3-DC1B-453F-8DCE-2EBF0EB4B80C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CF08A3-DC1B-453F-8DCE-2EBF0EB4B80C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51CF08A3-DC1B-453F-8DCE-2EBF0EB4B80C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51CF08A3-DC1B-453F-8DCE-2EBF0EB4B80C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
