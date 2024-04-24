@@ -1,0 +1,42 @@
+﻿﻿<aside id="aside-menu"
+       class="d-flex flex-column m-2 ms-0 mt-0 p-2 pt-0 bg-body-danger vh-100"
+       style="min-width:160px; max-width:200px;">
+    @foreach (var group in Service!.CaregoryLinkGroups)
+    {
+        <MainLinkComponent LinkGroup="group" OnAsideCall="OnAsideCallBack"/>
+    }
+</aside>
+
+@code {
+    [CascadingParameter(Name = "Service")] public UIService? Service { get; set; }
+    [Parameter] public EventCallback OnChange { get; set; }
+    void OnAsideCallBack(int id)
+    {
+        if (OnChange.HasDelegate)
+        {     
+            OnChange.InvokeAsync();
+        }
+    }
+
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     if (Service is not null)
+    //     {
+    //         await Service.GetLinkGroup();
+    //         await OnChange.InvokeAsync();
+    //     }
+    // }
+    // List<LinkGroup> CategoryLinkGroups { get; set; } = new()
+    // {
+    //     new LinkGroup()
+    //     {
+    //         Name = "Category",
+    //         LinkOptions = new()
+    //         {
+    //             new LinkOption { Id= 1, Name = "Women", IsSelected = true},
+    //             new LinkOption { Id= 2, Name = "Children", IsSelected = true},
+    //             new LinkOption { Id= 3, Name = "Men", IsSelected = true}
+    //         }
+    //     }
+    // };
+}

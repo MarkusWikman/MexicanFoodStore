@@ -20,4 +20,8 @@
     <ProjectReference Include="..\MexicanFoodStore.UI.Storage\MexicanFoodStore.UI.Storage.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+
 </Project>

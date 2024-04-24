@@ -1,17 +1,18 @@
 ﻿@page "/"
-@inject UIService service
+@inject UIService Service;
 
-<h3>Index</h3>
-@if (service is not null)
-{
-    var nr = 1;
-    foreach (var c in service.Categories)
+<NavigationComponent/>
+
+<div class="d-flex vh-100">
+    <CascadingValue Value="Service" Name="Service">
+   <SideComponent OnChange="OnChange"/>
+   <MainProductComponent/>
+   </CascadingValue>
+</div>
+
+@code{
+    void OnChange()
     {
-        <p>@nr</p>
-        nr++;
+        
     }
-}
-else
-{
-    <p>I can't find it</p>
 }

@@ -19,6 +19,11 @@ namespace MexicanFoodStore.UI.Services
         ];
         public int CurrentCategoryId { get; set; }
 
+        //public async Task<List<CategoryGetDTO>> GetAllCategories()
+        //{
+        //    var list = await categoryHttp.GetCategoriesAsync();
+        //    return list.ToList();
+        //}
         public async Task GetLinkGroup()
         {
             Categories = await categoryHttp.GetCategoriesAsync();
