@@ -54,6 +54,18 @@ app.Run();
 void RegisterEndpoints()
 {
     app.AddEndpoint<Product, ProductPostDTO, ProductPutDTO, ProductGetDTO>();
+    app.MapGet($"/api/productsbycategory/{{categoryId}}", async (IDbService db, int categoryId) =>
+    {
+        try
+        {
+            var result = await ((ProductDbService)db).GetProductsByCategoryAsync(categoryId);
+            return Results.Ok(result);
+        }
+        catch
+        {
+        }
+        return Results.BadRequest($"Couldn't get the requested products of type {typeof(Product).Name}.");
+    });
 }
 void RegisterServices()
 {
@@ -68,6 +80,7 @@ void ConfigureAutoMapper()
         cfg.CreateMap<Product, ProductPutDTO>().ReverseMap();
         cfg.CreateMap<Product, ProductGetDTO>().ReverseMap();
         cfg.CreateMap<ProductCategory, ProductCategoryDTO>().ReverseMap();
+
     });
     var mapper = config.CreateMapper();
     builder.Services.AddSingleton(mapper);
