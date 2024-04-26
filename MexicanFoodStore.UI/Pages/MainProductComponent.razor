@@ -1,4 +1,7 @@
-﻿<section class="d-flex flex-wrap">
+﻿@using MexicanFoodStore.UI.Storage.Services;
+@inject IStorageService Storage;
+
+<section class="d-flex flex-wrap">
     @foreach(var p in Service!.Products)
         {
                 <div class="card mb-3" style="max-width: 540px;">
@@ -24,12 +27,17 @@
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
                     <label class="btn btn-outline-primary" for="btnradio3">10</label>
                 </div>
+                <button class="btn btn-sm btn-success" @onclick="() => AddToCart(p)"><i class="bi-cart"></i></button>
                     </div>
                 </div>
         }
 </section>
 
 @code {
-    [CascadingParameter(Name = "Service")] public UIService? Service { get; set; }
-    [Parameter] public EventCallback OnChange { get; set; }
-}
+        [CascadingParameter(Name = "Service")] public UIService? Service { get; set; }
+        [Parameter] public EventCallback OnChange { get; set; }
+
+        async Task AddToCart(ProductGetDTO product)
+        {
+        }
+        }

@@ -1,7 +1,7 @@
 ﻿@page "/"
 @inject UIService Service;
 
-<NavigationComponent/>
+<NavigationComponent UICartService="Service"/>
 
 <div class="d-flex vh-100">
     <CascadingValue Value="Service" Name="Service">

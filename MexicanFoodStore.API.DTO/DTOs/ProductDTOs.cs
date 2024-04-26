@@ -15,7 +15,7 @@ public class ProductGetDTO : ProductPutDTO
     //public List<FilterGetDTO>? Filters { get; set; }
 
 }
-public class CartItemDTO : ProductGetDTO
+public class CartItemDTO : ProductPutDTO
 {
     //public List<FilterGetDTO>? Filters { get; set; }
 
