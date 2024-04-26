@@ -1,5 +1,6 @@
 ﻿@using MexicanFoodStore.UI.Storage.Services;
 @inject IStorageService Storage;
+@inject IMapper mapper
 
 <section class="d-flex flex-wrap">
     @foreach(var p in Service!.Products)
@@ -34,10 +35,16 @@
 </section>
 
 @code {
-        [CascadingParameter(Name = "Service")] public UIService? Service { get; set; }
-        [Parameter] public EventCallback OnChange { get; set; }
+    [CascadingParameter(Name = "Service")] public UIService? Service { get; set; }
+    [Parameter] public EventCallback OnChange { get; set; }
 
-        async Task AddToCart(ProductGetDTO product)
-        {
-        }
+    async Task AddToCart(ProductGetDTO product)
+    {
+        var cartItem = mapper.Map<CartItemDTO>(product);
+        Service!.CartItems.Add(cartItem);
+        await Service!.SaveToStorage("CartItems", Service!.CartItems);
+
+        if (OnChange.HasDelegate)
+            await OnChange.InvokeAsync();
+    }
         }
