@@ -2,3 +2,4 @@
 global using MexicanFoodStore.UI.Storage.Services;
 global using MexicanFoodStore.UI.Services;
 global using MexicanFoodStore.UI.Models.Link;
+global using MexicanFoodStore.API.DTO;

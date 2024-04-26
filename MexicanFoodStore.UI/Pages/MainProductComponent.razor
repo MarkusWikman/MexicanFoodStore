@@ -1,8 +1,6 @@
 ﻿<section class="d-flex flex-wrap">
-    <ul class="list-group">
     @foreach(var p in Service!.Products)
         {
-            <li class="list-group-item">
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -16,9 +14,7 @@
                         </div>
                     </div>
                 </div>
-            </li>
         }
-    </ul>
 </section>
 
 @code {
