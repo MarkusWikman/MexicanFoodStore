@@ -1,25 +1,34 @@
-﻿@using MexicanFoodStore.API.DTO;
-﻿﻿
-<nav class="navbar d-flex justify-content-between mx-3">
-    <a class="navbar-brand" href="#"><img src="Images/bruttio.png" /></a>
+﻿<nav class="navbar d-flex justify-content-between mx-3">
+    <a class="navbar-brand" href="#"><img src="images/1000_f_32615553_zion9z7avgpjgkvkm5jgjpbpbe2wqvpg.jpg" style="width:120px;"/></a>
+    <div class="input-group flex-nowrap search-width">
+        <input type="text" class="form-control rounded-0" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        <span class="input-group-text rounded-0" id="addon-wrapping"><i class="bi bi-search"></i></span>
+    </div>
     <div class="d-flex justify-content-between ">
         <div class="dropdown">
-            <button id="cart-button" type="button"
-                    data-bs-toggle="modal" data-bs-target="#cart"
-                    class="btn btn-outline-success rounded-0">
-                <i class="bi bi-cart"></i>
+            <button class=" rounded-0 btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-lock"></i> Account
             </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
         </div>
         <div>
             <div class="position-relative">
-                <button id="cart-button" type="button" class="btn btn-outline-success rounded-0"><i class="bi bi-cart"></i></button>
+                <button id="cart-button" type="button"
+                        data-bs-toggle="modal" data-bs-target="#cart"
+                        class="btn btn-outline-success rounded-0">
+                    <i class="bi bi-cart"></i>
+                </button>
                 <div class="cart-count bg-danger text-white rounded-circle position-absolute">@UICartService!.CartItems.Count</div>
             </div>
             <div></div>
         </div>
     </div>
 </nav>
-<CartComponent></CartComponent>
+<CartComponent OnRemoveCartItem="OnRemoveCartItem" CartItems="UICartService.CartItems" />
 @code {
     [Parameter] public UIService? UICartService { get; set; }
 
