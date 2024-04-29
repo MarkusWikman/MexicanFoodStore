@@ -1,18 +1,23 @@
 ﻿@page "/"
 @inject UIService Service;
 
-<NavigationComponent UICartService="Service"/>
+<NavigationComponent UICartService="Service" />
 
-<div class="d-flex vh-100">
+<div class="d-flex vh-100" style="position: relative;">
     <CascadingValue Value="Service" Name="Service">
-   <SideComponent OnChange="OnChange"/>
-   <MainProductComponent OnChange="OnChange"/>
-   </CascadingValue>
+        <SideComponent OnChange="OnChange" />
+        <div style="text-align:center; position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 999;">
+            <h3>¡Bienvenidos!</h3>
+            <h4>Till ditt förstaval av mexikansk mat på nätet</h4>
+        </div>
+        <MainProductComponent OnChange="OnChange" />
+    </CascadingValue>
 </div>
 
-@code{
+@code {
+
     void OnChange()
     {
-        
     }
+
 }
